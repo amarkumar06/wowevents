@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&family=Martel+Sans:wght@600;700;800&family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,200;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'inconsolata';
+}
+
+
+.nav_container {
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  padding: 0 3rem;
+}
+
+.nav_box>ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  position: relative;
+}
+
+a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: red;
+  left: 0;
+  bottom: -5px;
+  transition: 0.2s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: red;
+}
+
+
+
+.heading {
+  font-size: 2.3rem;
+  padding: 0 3rem;
+}
+
+.heading {
+  display: inline-flex;
+}
+
+.dynamic-text li {
+  list-style: none;
+  color: black;
+  position: relative;
+  top: 0;
+  /* animation: slide 7s steps(6) infinite; */
+}
+
+@keyframes slide {
+  100% {
+    top: -300px;
+  }
+}
+
+.dynamic-text {
+  margin-left: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  overflow: hidden;
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-left: 2px solid black;
+  animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+  }
+}
+
+
+.img_section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1.8rem;
+  gap: 1rem;
+
+}
+
+.img_box {
+  width: 31vw;
+  padding: 0.4rem;
+  display: flex;
+  flex-flow: column;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.img_box p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.show-more {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+.show-more button {
+  width: 13vw;
+  height: 5vh;
+  margin: 1rem 0;
+  color: red;
+  font-size: 15px;
+  background-color: white;
+  border: solid white;
+}
+
+.show-more button:hover {
+  color: gray;
+  border: 1px solid rgba(128, 128, 128, 0.878);
+  cursor: pointer;
+}
+
+
+.clients_section p {
+  font-size: 33px;
+  font-family:'Unica One', sans-serif;
+  padding: 0 3rem;
+  margin: 1rem;
+}
+
+.companys{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center ;
+  padding: 0 5em;
+}
+
+
+.company-logo{
+  width: 150px;
+  height: 120px;
+}
+
+.company-logo img{
+ width: 100%;
+ aspect-ratio: 4/4;
+ object-fit: contain;
+ mix-blend-mode: color-burn;
+ 
+}
+
+.company-logo:hover{
+  background-color: #ea3556;
+  transition: all 2s linear;
+}
+.company-logo img:hover{
+  opacity: 0;
+}
+
+
+.footer{
+  height: 100px;
+ box-shadow: 0 -0.2px 2px gray;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.footer-text{
+  margin-left: 2rem;
+  font-family: 'inconsolata';
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+}
+
+.chat-icon{
+  margin-right: 13rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.chat-icon>a:hover{
+  color: blue;
+}
+
+.pop-icon{
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  cursor: pointer;
+}
+
+.text{
+  padding: 4px 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(92, 230, 92);
+}
+
+.icon{
+  font-size: 40px;
+  color: rgb(92, 230, 92);
+}
